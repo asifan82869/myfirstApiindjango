@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/user_list/$', UserList.as_view(), name='user_list'),
 	url(r'^api/user_list/(?P<employee_id>\d+)/$', UserDetail.as_view(), name='user_list'),
-	url(r'^api/auth/$', UserAuthToken.as_view(), name='user_auth_token'),
+	#url(r'^api/auth/$', UserAuthToken.as_view(), name='user_auth_token'),
 ]

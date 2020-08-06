@@ -1,20 +1,20 @@
 import requests
-
+'''
 def get_token():
     url = "http://127.0.0.1:8000/api/auth/"
     response = requests.post(url, data = {'username': 'asif', 'password': 'asif1234'})
     return response.json()
-
+'''
 def get_data():
-    token = get_token()
+    #token = get_token()
     url = "http://127.0.0.1:8000/api/user_list/"
-    header = {'Authorization': 'Token {}'.format(token) }
-    response = requests.get(url, headers=header)
+    #header = {'Authorization': 'Token {}'.format(token) }
+    response = requests.get(url)
     data = response.json()
     print(type(data))
     for x in data:
         print(x)
-
+'''
 def check_id(id):
     token = get_token()
     already = 0
@@ -72,3 +72,4 @@ def delete_user(id):
     get_data()
 
 delete_user(6)
+'''
